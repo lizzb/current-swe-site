@@ -23,12 +23,25 @@ color:#000000;
 position:relative;
 }
 */
+/*
+jumbotron{padding:30px;margin-bottom:30px;color:inherit;/* background-color:#eee *}
+.jumbotron h1,.jumbotron .h1{color:inherit}
+.jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
+.container .jumbotron{border-radius:6px}
+.jumbotron .container{max-width:100%
+*/
 
+.transparent { background-color: tranparent;}
+.jumboholder
+{
+  background: #FFF url(../images/header.png) no-repeat center;
+}
 /* override bootstrap jumbotron styling */
 .jumbotron{
+  background-color: transparent;
     /* http://www.w3schools.com/cssref/css3_pr_background.asp*/
-    background: #FFF url(../images/header.jpg) no-repeat center;
-    margin:45px auto 0 auto;
+    /*background: #FFF url(../images/header.png) no-repeat center;*/
+    /*margin:45px auto 0 auto;*/
     /*padding:300px 45px 0px 310px;*/
     /*background-color:#ff3600;
     color:white;*/
@@ -211,6 +224,7 @@ body {
 
 #footer {
   border-top: 2px solid #DFD648;
+  background-color: rgb(52, 106, 50);
   background-image:url(../images/footer.jpg);
   background-repeat:no-repeat;
 height:141px;
