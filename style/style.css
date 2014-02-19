@@ -1,10 +1,38 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 /* CSS Document */
 body
 {
-background-color:#FFFFFF;
+/* Move down content because we have a fixed navbar that is 50px tall 
+http://getbootstrap.com/examples/jumbotron/jumbotron.css
+*/
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+    /* Margin bottom by footer height */
+  margin-bottom: 60px;
+
+  background-color:#FFFFFF;
 font-family:Arial, Helvetica, sans-serif;
 color:#000000;
 }
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+/*Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. 
+A fixed navbar has been added with
+     padding-top: 60px;on the
+      body > .container </p>*/
+
+
 
 /*
 .swe-container
@@ -13,7 +41,6 @@ width: 972px;
 margin:0 auto 0 auto;
 background-color:#FFFFFF;
 position:relative;
-}
 
 .cont
 {
@@ -23,33 +50,7 @@ color:#000000;
 position:relative;
 }
 */
-/*
-jumbotron{padding:30px;margin-bottom:30px;color:inherit;/* background-color:#eee *}
-.jumbotron h1,.jumbotron .h1{color:inherit}
-.jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
-.container .jumbotron{border-radius:6px}
-.jumbotron .container{max-width:100%
-*/
-
-/*.transparent { background-color: tranparent;}
-.jumboholder
-{
-  background: #FFF url(../images/header.png) no-repeat center;
-}*/
-/* override bootstrap jumbotron styling */
-.jumbotron{
-  /*background-color: transparent;*/
-    /* http://www.w3schools.com/cssref/css3_pr_background.asp*/
-
-    /*background: #FFF url(../images/header.png) no-repeat center;*/
-    
-    /*margin:45px auto 0 auto;*/
-    /*padding:300px 45px 0px 310px;*/
-    /*background-color:#ff3600;
-    color:white;*/
-}
-
-.header
+/*.header
 {
 /*background-image:url(../images/header.jpg);
 background-repeat:no-repeat;
@@ -57,11 +58,11 @@ margin:45px auto 0 auto;*/
 /*height:452px;*/
 /*width:972px;*/
 /*padding:300px 45px 0px 310px;*/
-}
+/*}
 .header-content
 {
-/*padding:300px 45px 0px 310px;*/
-}
+/*padding:300px 45px 0px 310px;*
+}*/
 
 .maincontent
 {
@@ -103,24 +104,29 @@ height:420px;
 
 
 .menuitem
-{/*
+{
+/*
 border-top:1px solid #DFD648;
 border-bottom:1px solid #DFD648;
 padding-left:5px;
 position:relative;
 background-color:#188142;
 font-family:Arial, Helvetica, sans-serif;
-font-weight:bold;
 font-size:12px;
 line-height:18px;
 color:#FFFFFF;
-width:108px;*/
+width:108px;
+*/
+background-color:#188142;
+
+color:#FFFFFF;
+font-weight:bold;
 }
 .menuitem:hover, .menuitem:active
 {
 background-color:#000000;
+background-color: rgb(24, 129, 66);
 }
-
 /*
 a.left:link, a.left:visited, a.left:hover, a.left:active {
 	color:#FFFFFF 
@@ -157,11 +163,6 @@ h1, h2
 font-size:20px;
 line-height:22px;
 }
-/*h2
-{
-font-size:20px;
-line-height:22px;
-}*/
 h3
 {
 font-size:16px;
@@ -205,31 +206,42 @@ a:link, a:visited { color:#188142 }
 a:hover, a:active { color:#4A9644 }
 
 
+.navbar-logo
+{
+  margin:0 auto; 
+  margin-bottom: 10px; 
+  top: 0; 
+  position: absolute; 
+  float: left;
+}
 
 
 
-/* Sticky footer styles
+
+/* Custom page CSS
 -------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+/*
+.navbar /*> .container *{
+  background: #FFF url(../images/header-1.png) no-repeat center;
 
-/*Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with
-      <code>padding-top: 60px;</code>on the
-      <code>body > .container</code>.</p>*/
-html {
-  position: relative;
-  min-height: 100%;
+}*/
+
+
+.container .text-muted {
+  margin: 20px 0;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
+
 
 #footer {
   border-top: 2px solid #DFD648;
-  background-color: rgb(52, 106, 50);
-  background-image:url(../images/footer.jpg);
-  background-repeat:no-repeat;
-height:141px;
+  background: rgb(52, 106, 50) url(../images/footer.jpg) no-repeat center;
+  height:141px;
   
   position: absolute;
   bottom: 0;
@@ -237,21 +249,22 @@ height:141px;
   /* Set the fixed height of the footer here */
   /*height: 60px;*/
   background-color: #f5f5f5;
+  background-color: rgb(24, 129, 66);
+}
+
+
+
+.navbar-header, .navbar-default {
+  background-color: #f8f8f8;
+  background-color: rgb(52, 106, 50);
+  border-color: #e7e7e7;
 }
 
 /*#navcontainer
 {
   background: url(../images/header-1.png) no-repeat center;*
   height: 210px;
-
 }*/
-
-.navbar-default {
-  background-color: #f8f8f8;
-  background-color: rgb(52, 106, 50);
-  border-color: #e7e7e7;
-  
-}
 /*
 .navbar-header {
     background: url(../images/header-1-sm.png) no-repeat center;
@@ -329,35 +342,29 @@ height:141px;
 }*/
 
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
+
+
+
+
 /*
-.navbar /*> .container *{
-  background: #FFF url(../images/header-1.png) no-repeat center;
+jumbotron{padding:30px;margin-bottom:30px;color:inherit;/* background-color:#eee *}
+.jumbotron h1,.jumbotron .h1{color:inherit}
+.jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
+.container .jumbotron{border-radius:6px}
+.jumbotron .container{max-width:100%
+*/
 
-}8?
 
-body > .container {
-  padding: 60px 15px 0;
-}
-.container .text-muted {
-  margin: 20px 0;
-}
-
-#footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-/*
-code {
-  font-size: 80%;
+/* override bootstrap jumbotron styling *
+.jumbotron{
+  /*background-color: transparent;*/
+    /* http://www.w3schools.com/cssref/css3_pr_background.asp*/
+    /*background: #FFF url(../images/header.png) no-repeat center;*/
+    
+    /*margin:45px auto 0 auto;*/
+    /*padding:300px 45px 0px 310px;*/
+    /*background-color:#ff3600;
+    color:white;*
 }*/
 
-/* Move down content because we have a fixed navbar that is 50px tall 
-http://getbootstrap.com/examples/jumbotron/jumbotron.css
-*/
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
+
