@@ -1,0 +1,243 @@
+/* CSS Document */
+body
+{
+background-color:#FFFFFF;
+font-family:Arial, Helvetica, sans-serif;
+color:#000000;
+}
+
+/*
+.swe-container
+{
+width: 972px;
+margin:0 auto 0 auto;
+background-color:#FFFFFF;
+position:relative;
+}
+
+.cont
+{
+margin:0 auto 0 115px;
+border: 3px solid #DFD648;
+color:#000000;
+position:relative;
+}
+*/
+.header
+{
+background-image:url(../images/header.jpg);
+background-repeat:no-repeat;
+margin:45px auto 0 auto;
+height:452px;
+width:972px;
+}
+.header-content
+{
+padding:300px 45px 0px 310px;
+}
+
+.maincontent
+{
+background-image:url(../images/bg.jpg);
+background-repeat:repeat-y;
+padding-top:20px;
+background-color:#FFFFFF;
+line-height:20px;
+color:#000000;
+position:relative;
+}
+.content
+{
+background-image:url(../images/bg.jpg);
+background-repeat:repeat-y;
+padding:3px 15px 3px 135px;
+font-family:Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:12px;
+font-weight:bold;
+line-height:20px;
+}
+
+
+.leftbar
+{
+position: relative;
+float:left;
+/*width:108px;*/
+text-decoration:none;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+/*font-size:12px;
+line-height:18px;
+color:#FFFFFF;*/
+overflow:hidden;
+height:420px;
+}
+
+
+.menuitem
+{/*
+border-top:1px solid #DFD648;
+border-bottom:1px solid #DFD648;
+padding-left:5px;
+position:relative;
+background-color:#188142;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:12px;
+line-height:18px;
+color:#FFFFFF;
+width:108px;*/
+}
+.menuitem:hover, .menuitem:active
+{
+background-color:#000000;
+}
+
+
+a.left:link, a.left:visited, a.left:hover, a.left:active {
+	color:#FFFFFF 
+}
+
+
+.divisionbar
+{
+background-image:url(../images/div_bg.jpg);
+background-repeat:repeat-y;
+padding-left:108px;
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+font-weight:bold;
+color:#FFFFFF;
+text-align:center;
+letter-spacing:2px;
+line-height:20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+}
+h1, h2, h5, h6 {
+	font-weight:bold;
+}
+
+h1, h3, h6 {
+	text-align:center;
+}
+h1, h2
+{
+font-size:20px;
+line-height:22px;
+}
+/*h2
+{
+font-size:20px;
+line-height:22px;
+}*/
+h3
+{
+font-size:16px;
+line-height:18px;
+font-weight:normal;
+}
+h4
+{
+font-size:16px;
+font-weight:normal;
+}
+h5
+{
+font-size:12px;
+}
+h6
+{
+font-size:16px;
+padding:0px;
+margin:auto;
+}
+
+.swelist
+{
+list-style-image:url(../images/bullet.jpg);
+list-style-position:outside;
+margin-left:20px;
+}
+.sublist
+{
+list-style-image:url(../images/bullet2.jpg);
+list-style-position:outside;
+margin-left:40px;
+}
+a
+{
+text-decoration:none;
+border:none;
+}
+a:link, a:visited { color:#188142 }     
+a:hover, a:active { color:#4A9644 }
+
+
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+/*Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with
+      <code>padding-top: 60px;</code>on the
+      <code>body > .container</code>.</p>*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+#footer {
+  border-top: 2px solid #DFD648;
+  background-image:url(../images/footer.jpg);
+  background-repeat:no-repeat;
+height:141px;
+  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  /*height: 60px;*/
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+/*
+code {
+  font-size: 80%;
+}*/
+
+/* Move down content because we have a fixed navbar that is 50px tall 
+http://getbootstrap.com/examples/jumbotron/jumbotron.css
+*/
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
