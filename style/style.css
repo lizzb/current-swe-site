@@ -23,17 +23,29 @@ color:#000000;
 position:relative;
 }
 */
+
+/* override bootstrap jumbotron styling */
+.jumbotron{
+    /* http://www.w3schools.com/cssref/css3_pr_background.asp*/
+    background: #FFF url(../images/header.jpg) no-repeat center;
+    margin:45px auto 0 auto;
+    /*padding:300px 45px 0px 310px;*/
+    /*background-color:#ff3600;
+    color:white;*/
+}
+
 .header
 {
-background-image:url(../images/header.jpg);
+/*background-image:url(../images/header.jpg);
 background-repeat:no-repeat;
-margin:45px auto 0 auto;
-height:452px;
-width:972px;
+margin:45px auto 0 auto;*/
+/*height:452px;*/
+/*width:972px;*/
+/*padding:300px 45px 0px 310px;*/
 }
 .header-content
 {
-padding:300px 45px 0px 310px;
+/*padding:300px 45px 0px 310px;*/
 }
 
 .maincontent
@@ -94,10 +106,10 @@ width:108px;*/
 background-color:#000000;
 }
 
-
+/*
 a.left:link, a.left:visited, a.left:hover, a.left:active {
 	color:#FFFFFF 
-}
+}*/
 
 
 .divisionbar
