@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/offcanvas/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+
+  <title>Off Canvas Template for Bootstrap</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!--link href="http://getbootstrap.com/examples/offcanvas/offcanvas.css" rel="stylesheet"-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style>
+    /*
+     * Style tweaks
+     * --------------------------------------------------
+     */
+    html,
+    body {
+      overflow-x: hidden; /* Prevent scroll on narrow devices */
+    }
+    body {
+      padding-top: 70px;
+    }
+    footer {
+      padding: 30px 0;
+    }
+    
+    /*
+     * Off Canvas
+     * --------------------------------------------------
+     */
+    @media screen and (max-width: 767px) {
+      .row-offcanvas {
+        position: relative;
+        -webkit-transition: all .25s ease-out;
+           -moz-transition: all .25s ease-out;
+                transition: all .25s ease-out;
+      }
+    
+      .row-offcanvas-right {
+        right: 0;
+      }
+    
+      .row-offcanvas-left {
+        left: 0;
+      }
+    
+      .row-offcanvas-right
+      .sidebar-offcanvas {
+        right: -50%; /* 6 columns */
+      }
+    
+      .row-offcanvas-left
+      .sidebar-offcanvas {
+        left: -50%; /* 6 columns */
+      }
+    
+      .row-offcanvas-right.active {
+        right: 50%; /* 6 columns */
+      }
+    
+      .row-offcanvas-left.active {
+        left: 50%; /* 6 columns */
+      }
+    
+      .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 50%; /* 6 columns */
+      }
+    }
+  </style>
+
+</head>
+
+<body style="">
+  <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://getbootstrap.com/examples/offcanvas/#">Project name</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="http://getbootstrap.com/examples/offcanvas/#">Home</a>
+          </li>
+          <li>
+            <a href="http://getbootstrap.com/examples/offcanvas/#about">About</a>
+          </li>
+          <li>
+            <a href="http://getbootstrap.com/examples/offcanvas/#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.nav-collapse -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.navbar -->
+
+  <div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-left">
+      <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+        <div class="list-group">
+          <a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item active">Home</a>
+          <a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Calendar</a>
+          <a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Pictures</a>
+          <a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Events</a>
+          <a href="http://getbootstrap.com/examples/offcanvas/#" class="list-group-item">Industry Day</a>
+          <a href="#" class="list-group-item">Career Day for Girls</a>
+          <a href="#" class="list-group-item">Spring Banquet</a>
+          <a href="#" class="list-group-item">Summer Program</a>
+          <a href="http://societyofwomenengineers.swe.org/" target="_blank" class="list-group-item">SWE National</a>
+          <a href="https://live.connect.daxko.com/CommandDispatch.aspx?cmd=Portal.Login&context=047999ff-c737-440d-8e6d-34d6b522e383&state=Start&portal=047999ff-c737-440d-8e6d-34d6b522e383&cookieCheck=true" target="_blank" class="list-group-item">Join SWE</a>
+          <a href="#" class="list-group-item">Executive Board</a>
+          <a href="#" class="list-group-item">By-Laws</a>
+        </div>
+      </div>
+      <!--/span-->
+
+
+      <div class="col-xs-12 col-sm-9">
+        <p class="pull-left visible-xs">
+          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+        </p>
+        <div class="jumbotron">
+          <h1>Society of Women Engineers
+            <br>Northwestern University</h1>
+          <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
+          <img src="http://swe.mccormick.northwestern.edu/Outstanding_Coll_Silver.png" />
+          <img src="http://swe.mccormick.northwestern.edu/Outstanding_Coll_Silver_FY11.jpg" />
+        </div>
+
+        <div class="row">
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>About Northwestern SWE</h2>
+            <p>The Northwestern University SWE chapter, founded in 1976, includes graduate and undergraduate female and male engineers interested in making a change both on and off the campus. Through various hosted events, SWE members build relationships and networks with other female engineers and scientists, developing their skills in leadership, problem-solving, and interpersonal relationships.</p>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>How to Join</h2>
+            Any interested student at Northwestern University can join our Section of SWE.
+            <p>Joining is as simple as adding yourself to the listserv and starting to show up at events! Anyone can become a National Member of SWE by going to the National website at
+              <a href="http://www.swe.org/join" target="_blank">swe.org/join</a>
+            </p>
+            <hr>To join the Northwestern SWE listserv:
+            <br>Send an email to
+            <a href="mailto:listserv@listserv.it.northwestern.edu">listserv@listserv.it.northwestern.edu</a>with no subject and the body being
+            <br>SUBSCRIBE SWE Firstname Lastname
+            <br>You can also send an email with your full name to the technology director,
+            <a href="mailto:juliannewagoner2013@u.northwestern.edu">Julianne Wagoner</a>
+
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+        </div>
+        <!-- /row -->
+
+
+        <hr>
+
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+          <p>
+            <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+          </p>
+        </div>
+        <!--/span-->
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+          <p>
+            <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+          </p>
+        </div>
+        <!--/span-->
+        <div class="col-6 col-sm-6 col-lg-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+          <p>
+            <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+          </p>
+        </div>
+        <!--/span-->
+
+
+
+
+
+        <hr>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+        <div class="jumbotron">
+
+          <!--h1>Northwestern SWE Industry Day 2013</h1-->
+          <p>The Society of Women Engineers (SWE) is a nationally recognized professional, educational, non-profit, and service organization dedicated to promoting interest in and encouraging women to pursue the fields of science and engineering.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <!--h2>Heading</h2-->
+            <p>Each quarter, our section of SWE holds 1 major event, 1-2 general meetings, a few small social events, and outreach events. Just a few of these events are outlined below.</p>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>Major events</h2>
+            Our major events consist of the following (click on title for more information):
+            <br>
+            <!--br-->
+            <li class="swelist">
+              <a href="http://swe.mccormick.northwestern.edu/summerprogram.html">STEP Program</a>
+            </li>
+            <li class="sublist">A 3-Day Summer Technology and Engineering Program for 7-9th Grade Girls</li>
+            <li class="swelist">
+              <a href="http://swe.mccormick.northwestern.edu/iday.html">Industry Day</a>
+            </li>
+            <li class="sublist">Technical career fair</li>
+            <li class="swelist">
+              <a href="http://swe.mccormick.northwestern.edu/cdfg.html">Career Day For Girls</a>
+            </li>
+            <li class="sublist">Outreach event for middle and high school girls</li>
+            <li class="swelist">
+              <a href="http://swe.mccormick.northwestern.edu/springbanquet.html">Spring Banquet</a>
+            </li>
+            <li class="sublist">A banquet honoring current SWE Members</li>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>General Meetings</h2>
+            <p>Our general meetings are a time when our SWE members can gather for updates on SWE events, participate in some sort of programming, grab some free food, buy SWE t-shirts, and just hang out.</p>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>Social Events</h2>
+            <p>For social events, we often try to organize lunches at the North Campus Einstein's Bagels. Sometimes we also have movie outings and are planning to hold more social events this upcoming fall when we return to school.</p>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>Outreach Events</h2>
+            <p>We participate in various volunteer outreach events within the Northwestern and neighboring communities including Take Your Daughter to Work Day, Girl Scout Badge Activities and Engineering Week.</p>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+        </div>
+        <!-- /row -->
+
+
+
+        <hr>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+        <div class="jumbotron">
+
+          <h1>Northwestern SWE Industry Day 2013</h1>
+          <p>Thursday, October 17, 2013</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <!--h2>About  SWE Industry Day </h2-->
+            <p>
+              This year's SWE Industry Day will take place on Thursday, October 17, 2013. SWE Industry Day is Northwestern's largest engineering and technology oriented career fair.</p>
+
+
+            <!--br-->For more information, please contact Program Director Alexandra Lamens at
+            <a href="mailto:swe.industryday.2013[at]gmail.com">swe.IndustryDay.2013@gmail.com</a>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>For Students</h2>
+            <!-- below h3 to h4 -->
+            <h4>Industry Day will be held in Norris University Center from 5 - 9 PM. Doors will close at 8:30.</h4>
+
+            <p>
+              SWE Industry Day is open to all Northwestern students and alumni. Students do not need to pre-register, but a Wildcard is required for entry. Please wear business attire.</p>
+            <br>A list of companies attending SWE Industry Day and the type of engineers they are looking to hire can be found here:
+            <br>
+            <a href="http://swe.mccormick.northwestern.edu/Iday%20Companies%20Grid-9.xls">Company Grid</a>
+            <br>The locations of each company's table at Industry Day can be found here:
+            <br>
+            <a href="http://swe.mccormick.northwestern.edu/Company%20locations.xlsx">Company Locations</a>
+            <br>Descriptions of each company attending Industry Day can be found here:
+            <br>
+            <a href="http://swe.mccormick.northwestern.edu/Company%20Descriptions.docx">Company Descriptions</a>
+            <br>
+            <br>If you are interested in volunteering for Industry Day, please contact Kathleen Zhou at
+            <a href="mailto:kathleenzhou2016[at]u.northwestern.edu">kathleenzhou@u.northwestern.edu</a>
+
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>For Employers</h2>
+            <h4>Registration is now closed.</h4>
+            <p>If you missed out on registration, please keep the event in mind for next year. SWE holds Career Day for Girls annually on the third Saturday in February.</p>
+            <h4>For more information:</h4>
+
+            <a href="mailto:hannahbeck2015@u.northwestern.edu">Contact Hannah Beck</a>
+            by email
+            <br>
+
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+        </div>
+        <!-- /row -->
+
+
+
+        <hr>
+
+
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+
+        <div class="jumbotron">
+          <p>Northwestern University and Society of Women Engineers:</p>
+          <h1>Career Day For Girls Engineering:
+            <br>Design a Better World!</h1>
+        </div>
+
+        <div class="row">
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>About Career Day for Girls</h2>
+            <h4>
+              Saturday, February 22, 2014
+              <br>McCormick School of Engineering and Applied Science
+              <br>2145 Sheridan Road, Evanston, IL 60208
+              <br>8:30 am - 3:30 pm
+              <br>
+
+            </h4>
+
+
+            <p>The Robert R. McCormick School of Engineering and Applied Science at Northwestern University is pleased to announce our 43rd annual Career Day for Girls, scheduled for Saturday, February 22, 2014. The theme of this one-day program is: Engineering: Design a Better World!</p>
+            <p>
+              This program is designed for female junior high and high school students who have an interest in science and mathematics. The program will contain educational and career information about opportunities in engineering and applied science. Our speakers are women who have engineering degrees and current female engineering students.</p>
+
+            The schedule for this year's Career Day for Girls can be found here:
+            <br>
+            <a href="http://swe.mccormick.northwestern.edu/Tent.Schedule14.doc">Schedule</a>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>Registration Information</h2>
+            <h4>Registration is now closed.</h4>
+            <p>If you missed out on registration, please keep the event in mind for next year. SWE holds Career Day for Girls annually on the third Saturday in February.</p>
+            <h4>For more information:</h4>
+
+            <a href="mailto:hannahbeck2015@u.northwestern.edu">Contact Hannah Beck</a>
+            by email
+            <br>
+
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+        </div>
+        <!--/row-->
+
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+        <div class="jumbotron">
+          <h1>Northwestern SWE Spring Banquet</h1>
+        </div>
+
+        <div class="row">
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>Event Details</h2>
+
+            <p>Spring Banquet is normally held in May. Please check back for more information on Spring Banquet 2014.</p>
+            <p>If you have any questions, please contact Divya Kathuria at
+              <a href="mailto:nuswepresident@gmail.com">nuswepresident@gmail.com</a>
+            </p>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>Spring Banquet Past Scholarship Recipients</h2>
+
+            <br>Congratulations to all our 2013 award recipients!
+            <br>
+            <br>
+
+
+            <u>Academic Acheivement</u>
+            <br>
+            <li class="swelist">Molly Bird</li>
+            <li class="swelist">Rose Milavitz</li>
+            <li class="swelist">Hannah Teitelbaum</li>
+            <li class="swelist">Julianne Wagoner</li>
+            <li class="swelist">Kathleen Zhou</li>
+
+            <br>
+            <br>
+
+            <u>Student of the Year Awards</u>
+            <br>
+            <li class="swelist">Outstanding Freshman: Kathleen Zhou</li>
+            <li class="swelist">Outstanding Sophomore: Hannah Beck</li>
+            <li class="swelist">Outstanding Junior: Liz Nelson</li>
+            <li class="swelist">Outstanding Senior: Connie Poupard</li>
+
+
+            <br>
+            <br>
+            <u>Abbott Laboratories Outstanding Student Awards</u>
+            <br>
+            <li class="swelist">Kelsey Berning</li>
+            <li class="swelist">Rose Milavitz</li>
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+        </div>
+        <!-- /row -->
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+        <div class="jumbotron">
+          <p>Northwestern University and Society of Women Engineers:</p>
+          <h1>Career Day For Girls Engineering:
+            <br>Design a Better World!</h1>
+        </div>
+
+        <div class="row">
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>About Career Day for Girls</h2>
+            <h4>
+              Saturday, February 22, 2014
+              <br>McCormick School of Engineering and Applied Science
+              <br>2145 Sheridan Road, Evanston, IL 60208
+              <br>8:30 am - 3:30 pm
+              <br>
+
+            </h4>
+
+
+            <p>This year's Summer Program will take place on June 16-18th, 2014. The Summer Technology and Engineering Program (STEP) is a free 3-Day non-residential camp for girls going into 7th, 8th, and 9th grades to encourage them to explore careers in the field of engineering.
+            </p>
+            Participants will:
+
+            <br>
+            <br>
+            <li class="swelist">Work in teams to complete and present a three day design activity.</li>
+            <li class="swelist">Participate in hand-on activities and classroom lessons</li>
+            <li class="swelist">Learn about the different engineering disciplines and the career opportunities within each.</li>
+            <li class="swelist">Explore laboratories at Northwestern's Technological Institute</li>
+            <li class="swelist">Interact in small groups with Northwestern undergraduate engineering students</li>
+            <li class="swelist">Meet other girls who are also excited about engineering!</li>
+
+            <p>
+              This program is designed for female junior high and high school students who have an interest in science and mathematics. The program will contain educational and career information about opportunities in engineering and applied science. Our speakers are women who have engineering degrees and current female engineering students.</p>
+
+            <p>
+              <a href="2014 STEP Flyer.pdf">Introduction Flyer</a>
+            </p>
+            <p>
+              Application Deadline:
+              <strong>May 1, 2014</strong>
+            </p>
+            <p>
+              <a href="STEP Student Application 2014.pdf">Student Application</a>
+            </p>
+            <strong>Download the student application here.</strong>
+
+            <p>
+
+              For more information, please contact Summer Program Director Camaria Lehman at
+              <a href="mailto:step.nuswe[at]gmail.com">step.nuswe@gmail.com</a>
+            </p>
+
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+
+
+
+          <div class="col-6 col-sm-6 col-lg-4">
+            <h2>Registration Information</h2>
+            <h4>Registration is now closed.</h4>
+            <p>If you missed out on registration, please keep the event in mind for next year. SWE holds Career Day for Girls annually on the third Saturday in February.</p>
+            <h4>For more information:</h4>
+
+            <a href="mailto:hannahbeck2015@u.northwestern.edu">Contact Hannah Beck</a>
+            by email
+            <br>
+
+            <p>
+              <a class="btn btn-default" href="http://getbootstrap.com/examples/offcanvas/#" role="button">View details »</a>
+            </p>
+          </div>
+          <!--/span-->
+        </div>
+        <!--/row-->
+
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+
+
+
+
+
+      </div>
+      <!--/row-->
+
+    </div>
+    <!--/span col-xs-12 col-sm-9-->
+
+
+    <hr>
+
+    <footer>
+      <p>© Company 2014</p>
+    </footer>
+
+  </div>
+  <!--/.container-->
+
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  <!--script src="./offcanvas_files/offcanvas.js"></script-->
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle=offcanvas]').click(function () {
+        $('.row-offcanvas').toggleClass('active')
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
